@@ -1,9 +1,9 @@
 import express from "express"
-import {getFishBySpecies} from "./controllers/fishsController.js"
+import {getProductById} from "./controllers/productsController.js"
 
 const app = express()
 
-app.get("/api/fish/:species", getFishBySpecies)
+app.get("/api/products/:id", getProductById)
 
 app.listen(3000, () => {
 	console.log("Server running on port 3000")
